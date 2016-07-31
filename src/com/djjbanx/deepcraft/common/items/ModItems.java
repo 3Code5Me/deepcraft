@@ -15,6 +15,5 @@ public final class ModItems {
 		GameRegistry.registerItem(compressedIron = new ItemCompressedIron(), "compressedIron");
 		GameRegistry.registerItem(compressedGold = new ItemCompressedGold(), "compressedGold");
 		GameRegistry.registerItem(compressedDiamond = new ItemCompressedDiamond(), "compressedDiamond");
-		// other test changes
 	}
 }
