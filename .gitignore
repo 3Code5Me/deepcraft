@@ -1,10 +1,8 @@
 /bin/
 /run/
 /build/
-.classpath
-.gradle/
-forge-1.10.2-12.18.1.2026-changelog.txt
-.settings/org.eclipse.jdt.core.prefs
+.gradle
 DeepCraft_Client.launch
 DeepCraft_Server.launch
+forge-1.10.2-12.18.1.2026-changelog.txt
 build/libs/DeepCraft-0.0.1.jar
