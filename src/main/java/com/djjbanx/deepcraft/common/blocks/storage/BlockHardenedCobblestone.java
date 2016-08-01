@@ -4,14 +4,14 @@ import com.djjbanx.deepcraft.common.other.ModCreativeTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockHardenedStone extends Block {
+public class BlockHardenedCobblestone extends Block {
 
-	public  BlockHardenedStone() {
+	public  BlockHardenedCobblestone() {
 		super(Material.ROCK);
-		this.setUnlocalizedName("hardenedStone")
+		this.setUnlocalizedName("hardenedCobblestone")
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
-		.setHardness(10.0f)
-		.setResistance(50.0f)
+		.setHardness(8.0f)
+		.setResistance(45.0f)
 		.setHarvestLevel("pickaxe", 3);
 	}
 	

@@ -9,7 +9,7 @@ public class BlockHardenedGravel extends BlockFalling {
 
 	public  BlockHardenedGravel() {
 		super(Material.SAND);
-		this.setUnlocalizedName("hardenedGravelBlock")
+		this.setUnlocalizedName("hardenedGravel")
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(5.0f)
 		.setResistance(35.0f)

@@ -9,7 +9,7 @@ public class BlockHardenedDirt extends Block {
 
 	public  BlockHardenedDirt() {
 		super(Material.GROUND);
-		this.setUnlocalizedName("hardenedDirtBlock")
+		this.setUnlocalizedName("hardenedDirt")
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(7.0f)
 		.setResistance(30.0f)

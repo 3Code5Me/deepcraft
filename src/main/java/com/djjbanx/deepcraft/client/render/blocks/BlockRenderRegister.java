@@ -16,6 +16,7 @@ public class BlockRenderRegister {
 		reg(ModBlocks.hardenedDirt);
 		reg(ModBlocks.hardenedGravel);
 		reg(ModBlocks.hardenedStone);
+		reg(ModBlocks.hardenedCobblestone);
 	}
 	
 	public static void reg(Block block, int meta) {
