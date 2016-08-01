@@ -2,10 +2,10 @@ package com.djjbanx.deepcraft.common.blocks.storage;
 
 import com.djjbanx.deepcraft.common.other.ModCreativeTab;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 
-public class BlockHardenedGravel extends Block {
+public class BlockHardenedGravel extends BlockFalling {
 
 	public  BlockHardenedGravel() {
 		super(Material.SAND);

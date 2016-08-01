@@ -6,4 +6,9 @@ tile.compressedIronBlock.name=Compressed Iron Block
 tile.compressedGoldBlock.name=Compressed Gold Block
 tile.compressedDiamondBlock.name=Compressed Diamond Block
 
+tile.hardenedDirtBlock.name=Hardened Dirt
+tile.hardenedGravelBlock.name=Hardened Gravel
+tile.hardenedStoneBlock.name=Hardened Stone
+tile.hardenedCobblestoneBlock.name=Hardened Cobblestone
+
 itemGroup.DeepCraft=Deep Craft
