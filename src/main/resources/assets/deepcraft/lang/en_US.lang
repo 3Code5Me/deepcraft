@@ -5,3 +5,5 @@ item.compressedDiamond.name=Compressed Diamond
 tile.compressedIronBlock.name=Compressed Iron Block
 tile.compressedGoldBlock.name=Compressed Gold Block
 tile.compressedDiamondBlock.name=Compressed Diamond Block
+
+itemGroup.DeepCraft=Deep Craft
