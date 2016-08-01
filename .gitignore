@@ -2,13 +2,7 @@
 /run/
 /build/
 .classpath
-grade/
-build.gradle
 forge-1.10.2-12.18.1.2026-changelog.txt
-.gradle/
-.gradle
-.gradlew
-.project
 .settings/org.eclipse.jdt.core.prefs
 DeepCraft_Client.launch
 DeepCraft_Server.launch
