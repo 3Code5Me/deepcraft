@@ -1,6 +1,7 @@
 package com.djjbanx.deepcraft.common.proxy;
 
 import com.djjbanx.deepcraft.common.blocks.ModBlocks;
+import com.djjbanx.deepcraft.common.crafting.ModCrafting;
 import com.djjbanx.deepcraft.common.items.ModItems;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -15,7 +16,7 @@ public class CommonProxy {
     }
 
     public void init(FMLInitializationEvent event) {
-
+    	ModCrafting.initCrafting();
     }
 
     public void postInit(FMLPostInitializationEvent event) {
