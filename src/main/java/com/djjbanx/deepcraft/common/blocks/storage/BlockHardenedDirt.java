@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 public class BlockHardenedDirt extends Block {
 
 	public  BlockHardenedDirt() {
-		super(Material.IRON);
+		super(Material.GROUND);
 		this.setUnlocalizedName("hardenedDirtBlock")
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(7.0f)

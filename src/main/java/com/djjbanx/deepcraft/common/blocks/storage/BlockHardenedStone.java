@@ -7,7 +7,7 @@ import net.minecraft.block.material.Material;
 public class BlockHardenedStone extends Block {
 
 	public  BlockHardenedStone() {
-		super(Material.IRON);
+		super(Material.ROCK);
 		this.setUnlocalizedName("hardenedStoneBlock")
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(10.0f)

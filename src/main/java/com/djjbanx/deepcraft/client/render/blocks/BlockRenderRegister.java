@@ -13,6 +13,9 @@ public class BlockRenderRegister {
 		reg(ModBlocks.compressedIronBlock);
 		reg(ModBlocks.compressedGoldBlock);
 		reg(ModBlocks.compressedDiamondBlock);
+		reg(ModBlocks.hardenedDirt);
+		reg(ModBlocks.hardenedGravel);
+		reg(ModBlocks.hardenedStone);
 	}
 	
 	public static void reg(Block block, int meta) {
