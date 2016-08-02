@@ -3,6 +3,7 @@ package com.djjbanx.deepcraft.common.crafting;
 import com.djjbanx.deepcraft.common.blocks.ModBlocks;
 import com.djjbanx.deepcraft.common.items.ModItems;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -26,5 +27,6 @@ public class ModCrafting {
 				"###",
 				'#', ModItems.compressedDiamond
 		});
+		GameRegistry.addSmelting(ModBlocks.hardenedCobblestone, new ItemStack(Item.getItemFromBlock(ModBlocks.hardenedStone)), 0.2F);
 	}
 }
