@@ -18,18 +18,18 @@ public final class ModBlocks {
 	public static Block compressedGoldBlock;
 	public static Block compressedDiamondBlock;
 	
-	public static Block hardenedDirt;
-	public static Block hardenedGravel;
-	public static Block hardenedStone;
+	public static Block hardenedDirtBlock;
+	public static Block hardenedGravelBlock;
+	public static Block hardenedStoneBlock;
 	
 	public static void createBlocks() {
 		registerBlock(compressedIronBlock = new BlockCompressedIron(), "compressedIronBlock");
 		registerBlock(compressedGoldBlock = new BlockCompressedGold(), "compressedGoldBlock");
 		registerBlock(compressedDiamondBlock = new BlockCompressedDiamond(), "compressedDiamondBlock");
 		
-		registerBlock(hardenedDirt = new BlockHardenedDirt(), "hardenedDirt");
-		registerBlock(hardenedGravel = new BlockHardenedGravel(), "hardenedGravel");
-		registerBlock(hardenedStone = new BlockHardenedStone(), "hardenedStone");
+		registerBlock(hardenedDirtBlock = new BlockHardenedDirt(), "hardenedDirt");
+		registerBlock(hardenedGravelBlock = new BlockHardenedGravel(), "hardenedGravel");
+		registerBlock(hardenedStoneBlock = new BlockHardenedStone(), "hardenedStone");
 	}
 
 	private static void registerBlock(Block block, String string) {
