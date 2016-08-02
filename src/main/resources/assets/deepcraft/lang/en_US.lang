@@ -14,4 +14,6 @@ tile.hardenedCobblestone.name=Hardened Cobblestone
 tile.blackPowderOre.name=Black Powder Ore
 tile.boneOre.name=Fossilized Compound
 
+tile.compressor.name=Compressor
+
 itemGroup.DeepCraft=Deep Craft

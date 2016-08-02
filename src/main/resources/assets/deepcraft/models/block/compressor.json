@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "deepcraft:blocks/compressorTopBottom",
+        "front": "deepcraft:blocks/compressorFrontOff",
+        "side": "deepcraft:blocks/compressorSide"
+    }
+}

@@ -1,6 +1,7 @@
 package com.djjbanx.deepcraft.common.blocks;
 
 import com.djjbanx.deepcraft.common.DeepCraft;
+import com.djjbanx.deepcraft.common.blocks.machines.BlockCompressor;
 import com.djjbanx.deepcraft.common.blocks.ores.BlockBlackPowderOre;
 import com.djjbanx.deepcraft.common.blocks.ores.BlockBoneOre;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockCompressedDiamond;
@@ -10,9 +11,11 @@ import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedCobblestone;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedDirt;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedGravel;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedStone;
+import com.djjbanx.deepcraft.common.blocks.tile.CompressorTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ModBlocks {
@@ -29,6 +32,8 @@ public final class ModBlocks {
 	public static Block blackPowderOre;
 	public static Block boneOre;
 	
+	public static Block compressor;
+	
 	public static void createBlocks() {
 		registerBlock(compressedIronBlock = new BlockCompressedIron(), "compressedIronBlock");
 		registerBlock(compressedGoldBlock = new BlockCompressedGold(), "compressedGoldBlock");
@@ -41,8 +46,18 @@ public final class ModBlocks {
 		
 		registerBlock(blackPowderOre = new BlockBlackPowderOre(), "blackPowderOre");
 		registerBlock(boneOre = new BlockBoneOre(), "boneOre");
+		
+		registerBlock(compressor = new BlockCompressor(), "compressor");
+	}
+	
+	public static void createTileEntities() {
+		registerTile(CompressorTileEntity.class, "compressorTileEntity");
 	}
 
+	private static void registerTile(Class<? extends TileEntity> entity, String id) {
+		GameRegistry.registerTileEntity(entity, id);
+	}
+	
 	private static void registerBlock(Block block, String string) {
 		block.setRegistryName(DeepCraft.MODID, string);
 		GameRegistry.register(block);
