@@ -1,9 +1,12 @@
 package com.djjbanx.deepcraft.common.blocks;
 
 import com.djjbanx.deepcraft.common.DeepCraft;
+import com.djjbanx.deepcraft.common.blocks.ores.BlockBlackPowderOre;
+import com.djjbanx.deepcraft.common.blocks.ores.BlockBoneOre;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockCompressedDiamond;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockCompressedGold;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockCompressedIron;
+import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedCobblestone;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedDirt;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedGravel;
 import com.djjbanx.deepcraft.common.blocks.storage.BlockHardenedStone;
@@ -18,18 +21,26 @@ public final class ModBlocks {
 	public static Block compressedGoldBlock;
 	public static Block compressedDiamondBlock;
 	
-	public static Block hardenedDirtBlock;
-	public static Block hardenedGravelBlock;
-	public static Block hardenedStoneBlock;
+	public static Block hardenedDirt;
+	public static Block hardenedGravel;
+	public static Block hardenedStone;
+	public static Block hardenedCobblestone;
+	
+	public static Block blackPowderOre;
+	public static Block boneOre;
 	
 	public static void createBlocks() {
 		registerBlock(compressedIronBlock = new BlockCompressedIron(), "compressedIronBlock");
 		registerBlock(compressedGoldBlock = new BlockCompressedGold(), "compressedGoldBlock");
 		registerBlock(compressedDiamondBlock = new BlockCompressedDiamond(), "compressedDiamondBlock");
 		
-		registerBlock(hardenedDirtBlock = new BlockHardenedDirt(), "hardenedDirt");
-		registerBlock(hardenedGravelBlock = new BlockHardenedGravel(), "hardenedGravel");
-		registerBlock(hardenedStoneBlock = new BlockHardenedStone(), "hardenedStone");
+		registerBlock(hardenedDirt = new BlockHardenedDirt(), "hardenedDirt");
+		registerBlock(hardenedGravel = new BlockHardenedGravel(), "hardenedGravel");
+		registerBlock(hardenedStone = new BlockHardenedStone(), "hardenedStone");
+		registerBlock(hardenedCobblestone = new BlockHardenedCobblestone(), "hardenedCobblestone");
+		
+		registerBlock(blackPowderOre = new BlockBlackPowderOre(), "blackPowderOre");
+		registerBlock(boneOre = new BlockBoneOre(), "boneOre");
 	}
 
 	private static void registerBlock(Block block, String string) {
