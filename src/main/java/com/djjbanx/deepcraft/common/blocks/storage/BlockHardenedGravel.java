@@ -13,7 +13,7 @@ public class BlockHardenedGravel extends BlockFalling {
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(5.0f)
 		.setResistance(35.0f)
-		.setHarvestLevel("shovel", 3);
+		.setHarvestLevel("shovel", 2);
 	}
 	
 }

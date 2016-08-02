@@ -12,7 +12,7 @@ public class BlockHardenedCobblestone extends Block {
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(8.0f)
 		.setResistance(45.0f)
-		.setHarvestLevel("pickaxe", 3);
+		.setHarvestLevel("pickaxe", 2);
 	}
 	
 }

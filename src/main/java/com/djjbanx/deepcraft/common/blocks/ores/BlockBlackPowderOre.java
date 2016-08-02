@@ -1,28 +1,34 @@
-package com.djjbanx.deepcraft.common.blocks.storage;
+package com.djjbanx.deepcraft.common.blocks.ores;
+
 import java.util.Random;
 
-import com.djjbanx.deepcraft.common.blocks.ModBlocks;
 import com.djjbanx.deepcraft.common.other.ModCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-public class BlockHardenedStone extends Block {
+public class BlockBlackPowderOre extends Block {
 
-	public  BlockHardenedStone() {
+	public BlockBlackPowderOre() {
 		super(Material.ROCK);
-		this.setUnlocalizedName("hardenedStone")
+		this.setUnlocalizedName("blackPowderOre")
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
-		.setHardness(10.0f)
-		.setResistance(50.0f)
+		.setHardness(3.0f)
+		.setResistance(15.0f)
 		.setHarvestLevel("pickaxe", 2);
 	}
 	
 	@Override
 	public Item getItemDropped(IBlockState blockstate, Random random, int fortune) {
-		return Item.getItemFromBlock(ModBlocks.hardenedCobblestone);
+		return Items.GUNPOWDER;
+	}
+	
+	@Override
+	public int quantityDropped(IBlockState blockstate, int fortune, Random random) {
+		return 1 + random.nextInt(3 + fortune);
 	}
 	
 }

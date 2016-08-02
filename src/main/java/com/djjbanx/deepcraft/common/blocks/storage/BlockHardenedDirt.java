@@ -13,7 +13,7 @@ public class BlockHardenedDirt extends Block {
 		.setCreativeTab(ModCreativeTab.tabDeepCraft)
 		.setHardness(7.0f)
 		.setResistance(30.0f)
-		.setHarvestLevel("shovel", 3);
+		.setHarvestLevel("shovel", 2);
 	}
 	
 }

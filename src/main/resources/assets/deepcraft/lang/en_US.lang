@@ -11,4 +11,7 @@ tile.hardenedGravel.name=Hardened Gravel
 tile.hardenedStone.name=Hardened Stone
 tile.hardenedCobblestone.name=Hardened Cobblestone
 
+tile.blackPowderOre.name=Black Powder Ore
+tile.boneOre.name=Fossilized Compound
+
 itemGroup.DeepCraft=Deep Craft
