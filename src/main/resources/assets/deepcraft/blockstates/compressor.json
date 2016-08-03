@@ -1,9 +1,8 @@
 {
     "variants": {
-    	"normal": { "deepcraft": "compressor" },
-        "facing=north": { "deepcraft": "compressor" },
-        "facing=south": { "deepcraft": "compressor", "y": 180 },
-        "facing=west":  { "deepcraft": "compressor", "y": 270 },
-        "facing=east":  { "deepcraft": "compressor", "y": 90 }
+        "facing=north": { "model": "deepcraft:compressor" },
+        "facing=south": { "model": "deepcraft:compressor", "y": 180 },
+        "facing=west":  { "model": "deepcraft:compressor", "y": 270 },
+        "facing=east":  { "model": "deepcraft:compressor", "y": 90 }
     }
 }
