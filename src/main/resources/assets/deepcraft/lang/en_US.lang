@@ -15,5 +15,6 @@ tile.blackPowderOre.name=Black Powder Ore
 tile.boneOre.name=Fossilized Compound
 
 tile.compressor.name=Compressor
+container.compressorTileEntity=Compressor
 
 itemGroup.DeepCraft=Deep Craft

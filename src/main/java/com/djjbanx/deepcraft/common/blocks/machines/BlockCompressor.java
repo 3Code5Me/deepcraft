@@ -1,6 +1,10 @@
 package com.djjbanx.deepcraft.common.blocks.machines;
 
+import javax.annotation.Nullable;
+
+import com.djjbanx.deepcraft.common.DeepCraft;
 import com.djjbanx.deepcraft.common.blocks.tile.CompressorTileEntity;
+import com.djjbanx.deepcraft.common.network.GuiHandler;
 import com.djjbanx.deepcraft.common.other.ModCreativeTab;
 
 import net.minecraft.block.BlockContainer;
@@ -11,12 +15,15 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
@@ -60,6 +67,15 @@ public class BlockCompressor extends BlockContainer {
             }
         }
 	}
+	
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
+    {
+        if (!worldIn.isRemote) {
+        	playerIn.openGui(DeepCraft.instance, GuiHandler.COMPRESSOR_GUI, worldIn, pos.getX(), pos.getY(), pos.getZ());
+        }
+        return true;
+    }
 	
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state)
