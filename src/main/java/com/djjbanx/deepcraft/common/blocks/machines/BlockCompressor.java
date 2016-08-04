@@ -11,6 +11,7 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
@@ -38,6 +39,26 @@ public class BlockCompressor extends BlockContainer {
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new CompressorTileEntity();
+	}
+	
+	@Override
+	public void breakBlock(World world, BlockPos pos, IBlockState blockstate) {
+		CompressorTileEntity te = (CompressorTileEntity) world.getTileEntity(pos);
+		InventoryHelper.dropInventoryItems(world, pos, te);
+		super.breakBlock(world, pos, blockstate);
+	}
+	
+	@Override
+	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+		if (stack.hasDisplayName())
+        {
+            TileEntity tileentity = worldIn.getTileEntity(pos);
+
+            if (tileentity instanceof CompressorTileEntity)
+            {
+                ((CompressorTileEntity) tileentity).setCustomName(stack.getDisplayName());
+            }
+        }
 	}
 	
 	@Override
