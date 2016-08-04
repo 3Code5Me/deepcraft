@@ -1,21 +1,14 @@
 package com.djjbanx.deepcraft.common.blocks.tile;
 
-import com.djjbanx.deepcraft.common.DeepCraft;
-import com.djjbanx.deepcraft.common.network.GuiHandler;
-
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.world.World;
 
 public class CompressorTileEntity extends TileEntity implements ITickable, IInventory {
 	
@@ -42,7 +35,7 @@ public class CompressorTileEntity extends TileEntity implements ITickable, IInve
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return this.hasCustomName() ? this.customName : "container.compressorTileEntity";
+		return this.hasCustomName() ? this.customName : "Compressor";
 	}
 
 	@Override
