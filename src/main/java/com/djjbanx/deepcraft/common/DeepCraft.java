@@ -3,6 +3,9 @@ package com.djjbanx.deepcraft.common;
 import com.djjbanx.deepcraft.common.proxy.CommonProxy;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.world.DimensionType;
+import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -17,7 +20,7 @@ public class DeepCraft {
     public static final String MODID = "deepcraft";
     public static final String MODNAME = "Deep Craft";
     public static final String VERSION = "1.0";
-    
+    public static final int dimensionID = DimensionManager.getNextFreeDimId();
     @Instance
     public static DeepCraft instance = new DeepCraft();
     
@@ -28,6 +31,16 @@ public class DeepCraft {
     public void preInit(FMLPreInitializationEvent event) {
     //PreInit reads config, creates blocks items etc, and registers them
     	proxy.preInit(event);
+    	
+    	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+
+    	config.load();
+    	
+    	//dimensionProviderID = config.get("ID", "providerID", 29).getInt();
+
+    	// Configuration goes here.
+    		
+    	config.save();
     }
     
     @EventHandler
@@ -41,5 +54,6 @@ public class DeepCraft {
     public void postInit(FMLPostInitializationEvent event) {
     //PostInit communicates with others mods and makes last minute adjustments
     	proxy.postInit(event);
+    	DimensionManager.registerDimension(dimensionID, DimensionType.OVERWORLD);
     }
 }
