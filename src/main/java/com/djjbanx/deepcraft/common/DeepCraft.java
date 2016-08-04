@@ -1,9 +1,11 @@
 package com.djjbanx.deepcraft.common;
 
+import com.djjbanx.deepcraft.common.dimensions.FirstCircleWorldProvider;
 import com.djjbanx.deepcraft.common.proxy.CommonProxy;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.world.DimensionType;
+import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -54,6 +56,8 @@ public class DeepCraft {
     public void postInit(FMLPostInitializationEvent event) {
     //PostInit communicates with others mods and makes last minute adjustments
     	proxy.postInit(event);
-    	DimensionManager.registerDimension(dimensionID, DimensionType.OVERWORLD);
+    	DimensionType.register("FirstCircle", "_deepcraft_firstCircle", dimensionID, FirstCircleWorldProvider.class, false);
+    	DimensionManager.registerDimension(dimensionID, DimensionType.getById(dimensionID));
+    	
     }
 }
