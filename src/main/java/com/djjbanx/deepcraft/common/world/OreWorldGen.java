@@ -12,7 +12,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
-public class ModWorldGen implements IWorldGenerator {
+public class OreWorldGen implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
@@ -34,7 +34,7 @@ public class ModWorldGen implements IWorldGenerator {
 	private WorldGenerator genBlackPowderOre; //Generates Black Powder Ore
 	private WorldGenerator genBoneOre;
 	
-	public ModWorldGen() {
+	public OreWorldGen() {
 		//4
 		this.genBlackPowderOre = new WorldGenMinable(ModBlocks.blackPowderOre.getDefaultState(), 4);
 		//3

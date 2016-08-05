@@ -5,7 +5,7 @@ import com.djjbanx.deepcraft.common.blocks.ModBlocks;
 import com.djjbanx.deepcraft.common.crafting.ModCrafting;
 import com.djjbanx.deepcraft.common.items.ModItems;
 import com.djjbanx.deepcraft.common.network.GuiHandler;
-import com.djjbanx.deepcraft.common.world.ModWorldGen;
+import com.djjbanx.deepcraft.common.world.OreWorldGen;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -24,9 +24,10 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
     	ModCrafting.initCrafting();
     	
-    	GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
+    	GameRegistry.registerWorldGenerator(new OreWorldGen(), 0);
     	
     	NetworkRegistry.INSTANCE.registerGuiHandler(DeepCraft.instance, new GuiHandler());
+    	
     }
 
     public void postInit(FMLPostInitializationEvent event) {
