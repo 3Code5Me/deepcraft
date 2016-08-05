@@ -18,10 +18,10 @@ public class OreWorldGen implements IWorldGenerator {
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		switch (world.provider.getDimension()) {
 		case 0:
-			//Rate 6 MinH 32 MaxH 126
-			this.runGenerator(genBlackPowderOre, world, random, chunkX, chunkZ, 6, 32, 126);
-			//Rate 12 MinH 5 MaxH 64
-			this.runGenerator(genBoneOre, world, random, chunkX, chunkZ, 12, 5, 64);
+			//Rate 6 MinH 5 MaxH 126
+			this.runGenerator(genBlackPowderOre, world, random, chunkX, chunkZ, 6, 5, 126);
+			//Rate 12 MinH 32 MaxH 126
+			this.runGenerator(genBoneOre, world, random, chunkX, chunkZ, 12, 32, 126);
 			break;
 		case -1:
 			
@@ -31,6 +31,7 @@ public class OreWorldGen implements IWorldGenerator {
 			break;
 		}
 	}
+	
 	private WorldGenerator genBlackPowderOre; //Generates Black Powder Ore
 	private WorldGenerator genBoneOre;
 	
@@ -41,15 +42,15 @@ public class OreWorldGen implements IWorldGenerator {
 		this.genBoneOre = new WorldGenMinable(ModBlocks.boneOre.getDefaultState(), 3);
 	}
 	
-	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {
+	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunkX, int chunkZ, int chancesToSpawn, int minHeight, int maxHeight) {
 	    if (minHeight < 0 || maxHeight > 256 || minHeight > maxHeight)
 	        throw new IllegalArgumentException("Illegal Height Arguments for WorldGenerator");
 
 	    int heightDiff = maxHeight - minHeight + 1;
 	    for (int i = 0; i < chancesToSpawn; i ++) {
-	        int x = chunk_X * 16 + rand.nextInt(16);
+	        int x = chunkX * 16 + rand.nextInt(16);
 	        int y = minHeight + rand.nextInt(heightDiff);
-	        int z = chunk_Z * 16 + rand.nextInt(16);
+	        int z = chunkZ * 16 + rand.nextInt(16);
 	        generator.generate(world, rand, new BlockPos(x, y, z));
 	    }
 	}
